@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20150717182816) do
   enable_extension "plpgsql"
 
   create_table "articles", force: :cascade do |t|
-    t.string   "headline"
-    t.text     "body"
+    t.string   "headline",   null: false
+    t.text     "body",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 20150717182816) do
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
   create_table "events", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
+    t.string   "title",       null: false
+    t.text     "description", null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
