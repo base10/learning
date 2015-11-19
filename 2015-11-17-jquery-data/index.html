@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>JQuery test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <ol data-role="elements" data-foo-id="1" data-something-or-other="bar">
+      <li>Entry</li>
+      <li>Entry</li>
+      <li>Entry</li>
+      <li>Entry</li>
+      <li>Entry</li>
+    </ol>
+
+    <script type="text/javascript">
+      jQuery(document).ready(function() {
+        element = jQuery("[data-role='elements']");
+        console.log(element.data('foo-id'));
+        console.log(element.data('something-or-other'));
+      });
+    </script>
+  </body>
+</html>
